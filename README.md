@@ -13,8 +13,8 @@ or
 ## Usage
 
 ```shell
-openpaas init # download and install OpenPaaS (take a coffee, seriously)
-cd openpaas
+openpaas init --dir=my-openpaas # download and install OpenPaaS (take a coffee, seriously)
+cd my-openpaas
 openpaas start # start it
 ```
 

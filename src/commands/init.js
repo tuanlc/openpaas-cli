@@ -15,12 +15,19 @@ module.exports = {
   command: 'init',
   desc: 'init OpenPaaS',
   builder: {
+    dir: {
+      alias: 'd',
+      describe: 'destination directory',
+      type: 'string',
+      default: 'openpaas'
+    }
   },
-  handler() {
+  handler(argv) {
+    const projectDir = argv.dir;
+
     checkNodeVersion();
     checkDocker();
 
-    const projectDir = 'openpaas';
     cloneRepo(projectDir);
 
     installDependencies(path.join(process.cwd(), projectDir));

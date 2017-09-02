@@ -12,4 +12,4 @@ before_install:
 
 script:
   - npm test
-  - ./bin/openpaas init
+  - ./bin/openpaas init --dir=openpaas-travis
