@@ -1,0 +1,25 @@
+{
+  "name": "openpaas-cli",
+  "version": "1.0.0",
+  "description": "The ultimate OpenPaaS CLI",
+  "main": "src/index.js",
+  "repository": "https://github.com/heroandtn3/openpaas-cli",
+  "author": "Sang",
+  "license": "MIT",
+  "scripts": {
+    "test": "./node_modules/.bin/eslint ."
+  },
+  "bin": {
+    "openpaas": "bin/openpaas"
+  },
+  "dependencies": {
+    "chalk": "^2.1.0",
+    "semver": "^5.4.1",
+    "yargs": "^8.0.2"
+  },
+  "devDependencies": {
+    "eslint": "^4.5.0",
+    "eslint-config-airbnb-base": "^11.3.2",
+    "eslint-plugin-import": "^2.7.0"
+  }
+}
