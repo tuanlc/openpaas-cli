@@ -65,9 +65,9 @@ function installDependencies(projectDir) {
   let command;
 
   if (getYarnVersionIfAvailable()) {
-    command = 'yarn global add grunt-cli && yarn --production';
+    command = 'yarn global add grunt-cli bower && yarn';
   } else {
-    command = 'npm i -g grunt-cli bower-cli && npm i';
+    command = 'npm i -g grunt-cli bower bower-cli && npm i';
   }
 
   return execSync(command, { stdio: 'inherit', cwd: projectDir });
