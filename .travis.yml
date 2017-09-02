@@ -7,6 +7,9 @@ node_js:
 services:
   - docker
 
+notifications:
+  email: false
+
 before_install:
   - sudo apt-get install -y libjpeg-dev graphicsmagick graphicsmagick-imagemagick-compat libpango1.0-dev libcairo2-dev libgif-dev
 
