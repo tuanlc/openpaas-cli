@@ -20,17 +20,22 @@ module.exports = {
       describe: 'destination directory',
       type: 'string',
       default: 'openpaas'
+    },
+    'with-npm': {
+      describe: 'force to use NPM instead of Yarn to install dependencies',
+      type: 'boolean'
     }
   },
   handler(argv) {
     const projectDir = argv.dir;
+    const withNpm = argv.withNpm;
 
     checkNodeVersion();
     checkDocker();
 
     cloneRepo(projectDir);
 
-    installDependencies(path.join(process.cwd(), projectDir));
+    installDependencies(path.join(process.cwd(), projectDir), withNpm);
     initServices();
     initOpenPaaS(projectDir);
   },
@@ -68,13 +73,13 @@ function cloneRepo(outDir = 'openpaas') {
   return execSync(`git clone --depth=1 ${REPO_URL} ${outDir}`, { stdio: 'inherit' });
 }
 
-function installDependencies(projectDir) {
+function installDependencies(projectDir, withNpm) {
   let command;
 
-  if (getYarnVersionIfAvailable()) {
+  if (!withNpm && getYarnVersionIfAvailable()) {
     command = 'yarn global add grunt-cli bower && yarn';
   } else {
-    command = 'npm i -g grunt-cli bower bower-cli && npm i';
+    command = 'npm i -g grunt-cli bower && npm i';
   }
 
   return execSync(command, { stdio: 'inherit', cwd: projectDir });
