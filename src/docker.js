@@ -113,4 +113,9 @@ module.exports = {
   start,
   stop,
   clean,
+  isContainerCreated,
+  isContainerRunning,
+  startContainer,
+  stopContainer,
+  removeContainer,
 };
