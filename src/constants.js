@@ -2,7 +2,7 @@ module.exports = {
   CONTAINERS: {
     TEST: {
       MONGODB: {
-        image: 'mongo:3.2.0',
+        image: 'mongo:3.4.13',
         name: 'esn-test-mongo',
         port: ['27017']
       },
