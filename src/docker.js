@@ -96,7 +96,7 @@ function createEsContainer() {
 
 function createMongoDbContainer() {
   const name = CONTAINER.MONGODB;
-  return execSync(`docker run -d --name ${name} -p 27017:27017 mongo:3.2.0`, { stdio: 'inherit' });
+  return execSync(`docker run -d --name ${name} -p 27017:27017 mongo:3.4.13`, { stdio: 'inherit' });
 }
 
 function createRabbitMqContainer() {
