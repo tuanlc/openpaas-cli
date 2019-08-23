@@ -9,6 +9,6 @@ yargs // eslint-disable-line no-unused-expressions
   .alias('help', 'h')
   .help('help')
   .version()
-  .epilogue('for more information, go to https://github.com/heroandtn3/openpaas-cli')
+  .epilogue('for more information, go to https://github.com/tuanlc/openpaas-cli')
   .example('$0 issue --help', 'show help of the issue command')
   .argv;

@@ -12,7 +12,7 @@ module.exports = {
         port: ['6379']
       },
       ELASTICSEARCH: {
-        image: 'elasticsearch:2.3.2',
+        image: 'docker.elastic.co/elasticsearch/elasticsearch:6.3.2',
         name: 'esn-test-es',
         port: ['9200']
       },
