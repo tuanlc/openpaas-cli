@@ -4,11 +4,11 @@
 
 ## Installation
 
-`yarn global add heroandtn3/openpaas-cli`
+`yarn global add tuanlc/openpaas-cli`
 
 or
 
-`npm i -g heroandtn3/openpaas-cli`
+`npm i -g tuanlc/openpaas-cli`
 
 ## Usage
 

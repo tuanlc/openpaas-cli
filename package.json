@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "The ultimate OpenPaaS CLI",
   "main": "src/index.js",
-  "repository": "https://github.com/heroandtn3/openpaas-cli",
+  "repository": "https://github.com/tuanlc/openpaas-cli",
   "author": "Sang",
   "license": "MIT",
   "scripts": {
