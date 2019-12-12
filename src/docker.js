@@ -91,7 +91,7 @@ function createRedisContainer() {
 
 function createEsContainer() {
   const name = CONTAINER.ELASTICSEARCH;
-  return execSync(`docker run -d --name ${name} -e -Ediscovery.type='single-node' -p 9200:9200 docker.elastic.co/elasticsearch/elasticsearch:6.3.2`, { stdio: 'inherit' });
+  return execSync(`docker run -d --name ${name} -e "discovery.type=single-node" -p 9200:9200 docker.elastic.co/elasticsearch/elasticsearch:6.3.2`, { stdio: 'inherit' });
 }
 
 function createMongoDbContainer() {
